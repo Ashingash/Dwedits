@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            transition: background-image 1s ease-in-out;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header, nav, main, footer {
+            background-color: transparent;
+        }
+        header {
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+        footer {
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .card {
+            background: transparent;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: none;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dw edits</h1>
+</header>
+
+<nav>
+    <a href="https://dwedits.com/">Home</a>
+</nav>
+
+
+<main class="container">
+    <section id="home" class="content">
+        <h2>Home</h2>
+        <div class="card">
+            <p>This is a sample content.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 My Website</p>
+</footer>
+
+<script>
+    // Array of background images
+    var backgroundImages = [
+        'https://c4.wallpaperflare.com/wallpaper/291/819/697/illustration-city-anime-painting-wallpaper-preview.jpg',
+        'https://c4.wallpaperflare.com/wallpaper/892/692/922/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-preview.jpg',
+        'https://img.freepik.com/free-photo/fantasy-water-representation_23-2151149381.jpg?t=st=1716198048~exp=1716201648~hmac=371532354773b4b4e9bd636c9040d69576939c14afb165f8bbe0bce15dd8dc08&w=1480',
+'https://c4.wallpaperflare.com/wallpaper/952/824/961/makoto-shinkai-kimi-no-na-wa-wallpaper-preview.jpg',
+'https://c4.wallpaperflare.com/wallpaper/803/347/759/anime-natural-light-landscape-forest-studio-ghibli-hd-wallpaper-preview.jpg',
+'https://c4.wallpaperflare.com/wallpaper/392/904/931/illustration-city-landscape-anime-girls-wallpaper-preview.jpg',
+    ];
+    
+    var currentIndex = 0;
+
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % backgroundImages.length;
+        document.body.style.backgroundImage = 'url(' + backgroundImages[currentIndex] + ')';
+    }
+
+    // Change background every 10 seconds
+    setInterval(changeBackground, 10000);
+
+    // Initial background image
+    document.body.style.backgroundImage = 'url(' + backgroundImages[currentIndex] + ')';
+</script>
+
+</body>
+</html>
